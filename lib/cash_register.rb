@@ -12,13 +12,10 @@ class CashRegister
   end
 
   def add_item(item, price, quantity = 1)
-    @item = item
-    @price = price
-    @quantity = quantity
     @total += price * quantity
     @last=price * quantity
-    @quantity.times do |i|
-      @cart << @item
+    quantity.times do |i|
+      @cart << item
     end
   end
 
